@@ -1,0 +1,798 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESET CSS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    MAIN
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot');
+    src: url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff') format('woff'),
+         url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'shrikhandregular';
+    src: url('fonts/shrikhand/shrikhand-regular-webfont.woff2') format('woff2'),
+         url('fonts/shrikhand/shrikhand-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body 
+{
+    font-size: 14px;
+    background-color: #fff;
+    font-family: 'robotoregular';
+    color: black;
+}
+a
+{
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+h2
+{
+    font-size: x-large;
+    font-weight: bold;
+}
+.container
+{
+    margin: 0px 30px;
+}
+$linkcolour: linear-gradient(155deg, rgba(255,121,218,1) 10%, rgba(147,86,220,1) 100%);
+img {
+    max-width: 100%;
+    height: auto;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    LOADER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fcf;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fcf transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    LOGO + EXPLORE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+header
+{
+    text-align: center;
+    img
+    {
+        width: 50%;
+        padding: 10px;
+    }
+}
+.explore__champ_de_recherche
+{
+    padding: 20px;
+    text-align: center;
+    background-color: #eaeaea;
+    input
+    {
+        background-color: #eaeaea;
+        border: none;
+        height: 30px;
+        &:focus
+        {
+            border: 2px solid #9356DC;
+            background-color: #f5edff;
+        }
+    }
+}
+.explore
+{
+    background-color: #f6f6f6;
+    padding-bottom: 50px;
+    h1
+    {
+        font-size: x-large;
+        text-align: center;
+        font-weight: bold;
+        width: 70%;
+        padding-top: 40px;
+        margin: auto;
+        padding-bottom: 10px;
+    }
+    p
+    {
+        width: 80%;
+        margin: auto;
+        text-align: center;
+        font-size: larger;
+        padding-bottom: 30px;
+
+    }   
+}
+.explore__btn
+    {
+        text-align: center;
+        a
+        {
+            background: $linkcolour;
+            padding: 15px 20px;
+            border-radius: 20px;
+            border: none;
+            color: white;
+            display: inline-block;
+            box-shadow: 3px 4px 13px grey;
+            transform: scale(1);
+            transition: all 200ms;
+            &:hover 
+            {
+                transform: scale(1.15);
+                filter: brightness(110%);
+                box-shadow: 3px 4px 13px #484848;
+            }
+            
+        }
+        
+    }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    FONCTIONNEMENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.fonctionnement
+{
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+.fonctionnement__etape
+{
+    display: flex;
+    padding: 20px 30px 20px 0px;
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: #f6f6f6;
+    box-shadow: 4px 4px 9px #eaeaea;
+    transform: scale(1);
+    transition: transform 200ms;
+    .etape__number
+    {
+        position: absolute;
+        left: -10px;
+        top: 17px;
+        color: white;
+        border-radius: 100%;
+        font-size: small;
+        background-color: #9356DC;
+        width: 25px;
+        height: 25px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    > div 
+    {   
+        display: flex;
+        font-weight: bold;
+        i
+        {
+            color: gray;
+            margin-left: 30px;
+            align-items: center;
+            display: flex;
+            font-size: large;
+        }
+        p
+        {
+            margin-left: 25px;
+        }
+    }
+    &:hover
+    {
+        background-color: #f5edff;
+        transform: scale(1.1);
+        i
+        {
+            color: #9356DC;
+        }
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESTAURANT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.restaurant
+{
+    background-color: #f6f6f6;
+    padding: 20px 0px;
+}
+.vignette
+{
+    position: relative;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 4px 8px -5px grey;
+    img
+    {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        height: 192px;
+        width: 100%;
+        object-fit: cover;
+    }
+    a 
+    {
+        > p 
+        {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #99E2D0;
+            font-size: x-small;
+            padding: 5px;
+            color: #009966;
+            font-weight: bold;
+        }
+    }
+    .vignette__bandeau
+    {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        div
+        {
+            h3
+            {
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+        } 
+    } 
+}
+.heart
+    {
+    i
+    {
+        text-align: center;
+        align-items: center;
+        display: flex;
+        font-size: x-large;
+    }       
+    .heart_true
+    {
+        position: absolute;
+        background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(0);
+    } 
+}
+.heart:hover
+{
+    .heart_false
+    {
+        opacity: 0;
+    }
+    .heart_true
+    {
+        transform: scale(1);
+        transition: transform 1s;
+    }
+}
+.heart_home
+{
+    position: absolute;
+    right: 35px;
+    bottom: 25px;
+    .heart_true
+    {
+        top: 0;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    FOOTER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+footer
+{
+    margin-top: 0px;
+    background-color: #353535;
+    padding: 33px 0px;
+    a 
+    {
+        color: white;
+        h3
+        {
+            font-family: 'shrinkhand';
+            font-weight: bold;
+            font-style: italic;
+            font-size: large;
+            padding-bottom: 20px;
+        }
+    }
+    
+    li
+    {
+        margin-bottom: 10px;
+        .fas
+        {
+            font-weight: 900;
+            margin-right: 20px;
+            width: 11px;
+            height: 13px;
+        }
+        a
+        {
+            color: white;
+            &:hover
+            {
+                text-decoration: underline;
+            }
+        }
+        
+    }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    
+                                                                                    PAGE MENU
+
+
+                                                                                    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.logo
+{
+    flex: 1;
+    a
+    {
+        display: inline-block;
+        padding: 10px 0px;
+    }
+}
+.bloc_page_menu
+{
+    header
+    {
+        display: flex;
+        align-items: center;
+        i
+        {
+            display: flex;
+            font-size: 18px;
+            margin-left: 25px;
+        }
+    }
+    > img
+    {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+}
+.container_menu
+{
+    padding: 0px 14px;
+    background-color: #f6f6f6;
+    padding-bottom: 20px;
+    margin-top: -50px;
+    z-index: 1;
+    position: relative;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    .header_menu
+    {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: x-large;
+        font-family: 'shrikhandregular';
+        padding-top: 30px;
+        padding-bottom: 10px;
+        h1
+        {
+            font-size: xx-large;
+        }
+        .heart_menu
+        {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container_section
+    {
+        margin-top: 30px;
+        .section
+        {
+            div
+            {
+                width: 40px;
+                border-top: 3px solid #99e2d0;
+                margin: 8px 0 0 0;
+            }
+            .section_header
+            {
+                position: relative;
+                &::after 
+                {
+                    content: "";
+                    width: 40px;
+                    height: 3px;
+                    background-color: #99e2d0;
+                    position: absolute;
+                    left: 0;
+                    bottom: -8px;
+                }
+            }
+        }
+        .container_liste
+        {
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+            .liste
+            {
+                background-color: white;
+                border-radius: 20px;
+                box-shadow: 4px 4px 9px #eaeaea;
+                margin: 14px 0px;
+                font-size: 13px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                .liste_description
+                {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    width: 50%;
+                    flex: 1;
+                    padding-left: 20px;
+                    p
+                    {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .prix
+                {
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-left: .5rem;
+                    width: 25%;
+                }
+                .confirmation
+                {
+                    background-color: #99e2d0;
+                    margin: 0px -64px 0px 0px;
+                    width: 4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition-duration: .5s;
+                    height: 100%;
+                    padding-top: 15px;
+                    padding-bottom: 15px;
+                    .confirmation_cercle
+                    {
+                        height: 1.6rem;
+                        width: 1.6rem;
+                        background-color: #fff;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100px;
+                        transform: rotate(180deg);
+                        transition-duration: .5s;
+                        color: #99e2d0;
+                    }
+                    /*font-size: medium;
+                    width: 100px;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #99e2d0;
+                    border-top-right-radius: 20px;
+                    border-bottom-right-radius: 20px;
+                    color: #99e2d0;
+                    margin-right: -102px;
+                    transition-duration: .5s;*/
+                }
+            }
+            .liste:hover
+            {
+                .liste_titre_et_description
+                {
+                    margin-right: 105px;
+                    transition-duration: .5s;
+                }
+                > .confirmation
+                {
+                    margin-right: 0px;
+                    .confirmation_cercle
+                        {
+                            transform: rotate(0);
+                            /*transform: rotate(-360deg);
+                            transition-duration: 1s;
+                            height: 25px;
+                            width: 25px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            justify-content: center;
+                            border-radius: 100%;
+                            background-color: white;*/
+                        }
+                }
+            }
+        }
+        h2
+        {
+            font-size: large;
+            font-weight: initial;
+        }
+    }
+    .section_entrees
+        {
+            animation: show_me 1s linear;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes show_me 
+        {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .section_plats
+        {
+            animation: show_me 1s 0.5s linear;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes show_me 
+        {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .section_dessert
+        {
+            animation: show_me 1s 1s linear;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes show_me 
+        {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+}
+
+.explore__btn--paddings
+{
+    padding-bottom: 80px;
+    padding-top: 40px;
+    background-color: #f6f6f6;
+    a
+    {
+        padding-left: 40px;
+        padding-right: 40px;
+        box-shadow: 3px 4px 13px grey;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE HOME
+                                                                                    TABLETTE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (min-width: 767px)
+{
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) LOGO + EXPLORE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+header
+{
+    img
+    {
+        width: auto;
+    }
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) FONCTIONNEMENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .fonctionnement
+    {
+        .container
+        {
+            display: flex;
+            flex-wrap: wrap;
+            h2
+            {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) RESTAURANT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .restaurant
+    {
+        .container
+        {    
+            justify-content: space-around;
+            display: flex;
+            flex-wrap: wrap;
+            .vignette
+            {
+                width: 45%;
+            }
+            h2
+            {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) FOOTER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    
+    footer
+    {
+        .container
+        {
+            width: 75%;
+            margin: auto;
+            h3
+                {
+                    text-align: center;
+                }
+        }
+        
+    }
+    nav
+    {
+        ul
+        {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE MENU
+                                                                                    TABLETTE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+    .container_menu
+        {
+            display: flex;
+            flex-wrap: wrap;
+            .header_menu
+            {
+                width: 100%;
+                align-items: center;
+                display: flex;
+                justify-content: center;
+                padding-bottom: 30px;
+                h1
+                {
+                    margin-right: 50px;
+                }
+            }
+            .container_section
+            {
+                width: 30%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE HOME
+                                                                                    ECRAN LARGE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 991px)
+{
+    .vignette
+    {
+        width: 23%;
+    }
+}

@@ -1,0 +1,875 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESET CSS
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    MAIN
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@font-face {
+  font-family: 'robotoregular';
+  src: url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot");
+  src: url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff2") format("woff2"), url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.woff") format("woff"), url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.ttf") format("truetype"), url("fonts/roboto/roboto_regular_macroman/Roboto-Regular-webfont.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'shrikhandregular';
+  src: url("fonts/shrikhand/shrikhand-regular-webfont.woff2") format("woff2"), url("fonts/shrikhand/shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-size: 14px;
+  background-color: #fff;
+  font-family: 'robotoregular';
+  color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+h2 {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.container {
+  margin: 0px 30px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    LOADER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.loader
+{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: hsla(0,0%,100%,.9);
+  animation: loader .01s;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contain_loader
+{
+  display: flex;
+  width: 5rem;
+  justify-content: space-between;
+}
+.loader__item
+{
+  height: 1rem;
+  width: 1rem;
+  border-radius: 1rem;
+  animation: jump 1s;
+  animation-iteration-count: 1;
+}
+.item-1
+{
+  background-color: #9356dc;
+}
+.item-2
+{
+  background-color: #ff79da;
+  animation-delay: .25s;
+}
+.item-3
+{
+  background-color: #99e2d0;
+  animation-delay: .5s;
+}
+@keyframes loader
+{
+  100%
+  {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes jump
+{
+  0% {
+    transform: translateY(0);
+}
+25% {
+    transform: translateY(.5rem);
+}
+75% {
+    transform: translateY(-.5rem);
+}
+100% {
+    transform: translateY(0);
+}
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    LOGO + EXPLORE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+header {
+  text-align: center;
+}
+
+header img {
+  width: 50%;
+  padding: 10px;
+}
+
+.explore__champ_de_recherche {
+  padding: 20px;
+  text-align: center;
+  background-color: #eaeaea;
+}
+
+.explore__champ_de_recherche input {
+  background-color: #eaeaea;
+  border: none;
+  height: 30px;
+}
+
+.explore__champ_de_recherche input:focus {
+  border: 2px solid #9356DC;
+  background-color: #f5edff;
+}
+
+.explore {
+  background-color: #f6f6f6;
+  padding-bottom: 50px;
+}
+
+.explore h1 {
+  font-size: x-large;
+  text-align: center;
+  font-weight: bold;
+  width: 70%;
+  padding-top: 40px;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.explore p {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  font-size: larger;
+  padding-bottom: 30px;
+}
+
+.explore__btn {
+  text-align: center;
+}
+
+.explore__btn a {
+  background: linear-gradient(155deg, #ff79da 10%, #9356dc 100%);
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  display: inline-block;
+  -webkit-box-shadow: 3px 4px 13px grey;
+          box-shadow: 3px 4px 13px grey;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+.explore__btn a:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-filter: brightness(110%);
+          filter: brightness(110%);
+  -webkit-box-shadow: 3px 4px 13px #484848;
+          box-shadow: 3px 4px 13px #484848;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    FONCTIONNEMENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.fonctionnement {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.fonctionnement__etape {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 30px 20px 0px;
+  border-radius: 20px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #f6f6f6;
+  -webkit-box-shadow: 4px 4px 9px #eaeaea;
+          box-shadow: 4px 4px 9px #eaeaea;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.fonctionnement__etape .etape__number {
+  position: absolute;
+  left: -10px;
+  top: 17px;
+  color: white;
+  border-radius: 100%;
+  font-size: small;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fonctionnement__etape > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+}
+
+.fonctionnement__etape > div i {
+  color: gray;
+  margin-left: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: large;
+}
+
+.fonctionnement__etape > div p {
+  margin-left: 25px;
+}
+
+.fonctionnement__etape:hover {
+  background-color: #f5edff;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.fonctionnement__etape:hover i {
+  color: #9356DC;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESTAURANT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.restaurant {
+  background-color: #f6f6f6;
+  padding: 20px 0px;
+}
+
+.vignette {
+  position: relative;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 2px 4px 8px -5px grey;
+          box-shadow: 2px 4px 8px -5px grey;
+}
+
+.vignette img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 192px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.vignette a > p {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #99E2D0;
+  font-size: x-small;
+  padding: 5px;
+  color: #009966;
+  font-weight: bold;
+}
+
+.vignette .vignette__bandeau {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+
+.vignette .vignette__bandeau div h3 {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.heart i {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: x-large;
+}
+
+.heart .heart_true {
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.heart:hover .heart_false {
+  opacity: 0;
+}
+
+.heart:hover .heart_true {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.heart_home {
+  position: absolute;
+  right: 35px;
+  bottom: 25px;
+}
+
+.heart_home .heart_true {
+  top: 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    FOOTER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+footer {
+  margin-top: 0px;
+  background-color: #353535;
+  padding: 33px 0px;
+}
+
+footer a {
+  color: white;
+}
+
+footer a h3 {
+  font-family: 'shrinkhand';
+  font-weight: bold;
+  font-style: italic;
+  font-size: large;
+  padding-bottom: 20px;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+footer li .fas {
+  font-weight: 900;
+  margin-right: 20px;
+  width: 11px;
+  height: 13px;
+}
+
+footer li a {
+  color: white;
+}
+
+footer li a:hover {
+  text-decoration: underline;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    
+                                                                                    PAGE MENU
+
+
+                                                                                    
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+.logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.logo a {
+  display: inline-block;
+  padding: 10px 0px;
+}
+
+.bloc_page_menu header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bloc_page_menu header i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 18px;
+  margin-left: 25px;
+}
+
+.bloc_page_menu > img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container_menu {
+  padding: 0px 14px;
+  background-color: #f6f6f6;
+  padding-bottom: 20px;
+  margin-top: -50px;
+  z-index: 1;
+  position: relative;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.container_menu .header_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: x-large;
+  font-family: 'shrikhandregular';
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.container_menu .header_menu h1 {
+  font-size: xx-large;
+}
+
+.container_menu .header_menu .heart_menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container_menu .container_section {
+  margin-top: 30px;
+}
+
+.container_menu .container_section .section div {
+  width: 40px;
+  border-top: 3px solid #99e2d0;
+  margin: 8px 0 0 0;
+}
+
+.container_menu .container_section .section .section_header {
+  position: relative;
+}
+
+.container_menu .container_section .section .section_header::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+}
+
+.container_menu .container_section .container_liste {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container_menu .container_section .container_liste .liste {
+  background-color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 9px #eaeaea;
+          box-shadow: 4px 4px 9px #eaeaea;
+  margin: 14px 0px;
+  font-size: 13px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.container_menu .container_section .container_liste .liste .liste_description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 50%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-left: 20px;
+}
+
+.container_menu .container_section .container_liste .liste .liste_description p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.container_menu .container_section .container_liste .liste .prix {
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: .5rem;
+  width: 25%;
+}
+
+.container_menu .container_section .container_liste .liste .confirmation {
+  background-color: #99e2d0;
+  margin: 0px -64px 0px 0px;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  height: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.container_menu .container_section .container_liste .liste .confirmation .confirmation_cercle {
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+  color: #99e2d0;
+}
+
+.container_menu .container_section .container_liste .liste:hover .liste_titre_et_description {
+  margin-right: 105px;
+  -webkit-transition-duration: .5s;
+          transition-duration: .5s;
+}
+
+.container_menu .container_section .container_liste .liste:hover > .confirmation {
+  margin-right: 0px;
+}
+
+.container_menu .container_section .container_liste .liste:hover > .confirmation .confirmation_cercle {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.container_menu .container_section h2 {
+  font-size: large;
+  font-weight: initial;
+}
+
+.container_menu .section_entrees {
+  -webkit-animation: show_me 1s linear;
+          animation: show_me 1s linear;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes show_me {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show_me {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container_menu .section_plats {
+  -webkit-animation: show_me 1s 0.5s linear;
+          animation: show_me 1s 0.5s linear;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@keyframes show_me {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.container_menu .section_dessert {
+  -webkit-animation: show_me 1s 1s linear;
+          animation: show_me 1s 1s linear;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@keyframes show_me {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.explore__btn--paddings {
+  padding-bottom: 80px;
+  padding-top: 40px;
+  background-color: #f6f6f6;
+}
+
+.explore__btn--paddings a {
+  padding-left: 40px;
+  padding-right: 40px;
+  -webkit-box-shadow: 3px 4px 13px grey;
+          box-shadow: 3px 4px 13px grey;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE HOME
+                                                                                    TABLETTE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 767px) {
+  /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) LOGO + EXPLORE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  header img {
+    width: auto;
+  }
+  /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) FONCTIONNEMENT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .fonctionnement .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .fonctionnement .container h2 {
+    width: 100%;
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) RESTAURANT
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .restaurant .container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .restaurant .container .vignette {
+    width: 45%;
+  }
+  .restaurant .container h2 {
+    width: 100%;
+    text-align: center;
+  }
+  /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    (T) FOOTER
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  footer .container {
+    width: 75%;
+    margin: auto;
+  }
+  footer .container h3 {
+    text-align: center;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  /*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE MENU
+                                                                                    TABLETTE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+  .container_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container_menu .header_menu {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 30px;
+  }
+  .container_menu .header_menu h1 {
+    margin-right: 50px;
+  }
+  .container_menu .container_section {
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                                    RESPONSIVE HOME
+                                                                                    ECRAN LARGE
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 991px) {
+  .vignette {
+    width: 23%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
